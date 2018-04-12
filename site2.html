@@ -1,0 +1,147 @@
+<html>
+<head>
+  <link rel="icon" type="image/png" href="image/1.png" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="css.css" rel="stylesheet">
+  <script src="script2.js"></script>
+  <script src="script3.js"></script>
+  <script src="php.js"></script>
+  <script src="massgen.js"></script>
+  <meta charset="utf-8">
+  <title>TileMapEditor</title>
+</head>
+  <body id="bodyid">
+    <!--                                   -->
+
+<!--
+    <div style="position: absolute;bottom:50px;right:150px;width:100px;height:100px;">
+        
+         <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+          Отправить этот файл: <input name="userfile" type="file" />
+          <input type="submit" value="Send File" onclick="sendFile();"/> 
+           
+        <input name="image" id="avatar2" type="file" >
+        <button onclick="addImage();">Загрузить аватар</button>
+    </div>
+
+  
+  -->
+    <!--                                    -->
+
+
+
+        <!--перетаскиваемый див -->
+      <div id="lulz2"  style="width:20px; height:20px; position:fixed;top:100px;left:5px;">
+        <!--дивЦвета -->
+              <div   onmousedown="xy();press = true;"class="color_dinamic_div">
+                <label for="ch"style="width:20px;height:20px;"></label>
+              </div>
+                <input id="ch" type="checkbox" style=" display: none;">
+                <div class="color_menu">
+                      <input id="id1" type="button"  onclick="textFuncy();" style="width:140px;background-color:rgb(142, 168, 216);border-radius: 20px;border:5px solid rgb(7, 131, 202);color:rgb(141, 0, 184);position:relative;left:40px;" value="добавить текстурку">
+                      <br><input type="button" class="button_color" style="background-image: url(image/ls.png);background-size:cover;" onclick="xdd.PressedButtonNumber=0;" >
+                          <input type="text" id="textureChar0"style="width:20px;" value="0"><br>
+                      <div id="divid">
+                      </div>
+                      <script src="Test.js"></script>
+                </div>
+          <!--/дивЦвета -->
+      </div>
+      <!--/перетаскиваемый див -->
+      <!--див настроек -->
+      <div id="lulz3"   style="width:20px; height:20px;position:fixed;top:100;left:35px;">
+              <div  onmousedown="xy_3();press_3 = true;"class="settings_dinamic_div">
+                <label for="ch1"style="width:20px;height:20px;z-index:15;"></label>
+              </div>
+                <input id="ch1" type="checkbox" style=" display: none;z-index:15;">
+                <div class="settings_menu" id="settings_menuId">
+                    <br>
+                    <span style="color:rgb(141, 0, 184);font-size:30px;">Задайте размеры и параметры поля</span><br>
+                    <span style="color:rgb(141, 0, 184);font-size:30px;">Стиль границы</span><br>
+                    <input type="radio" id="radioButton1" name="border" style="width:20px;height:20px;"><span style="color:rgb(141, 0, 184);font-size:20px;">Без границы</span>
+                      <br>
+                    <input type="radio" id="radioButton2" name="border" style="width:20px;height:20px;"><span style="color:rgb(141, 0, 184);font-size:20px;">Внешняя граница</span>
+                      <br>
+                    <input type="radio" id="radioButton3" name="border" style="width:20px;height:20px;" checked="checked" ><span style="color:rgb(141, 0, 184);font-size:20px;">Все границы</span>
+                      <br>
+                      <input type="text" class="width_height_cellSize" id="text" value="10" ><span style="color:rgb(141, 0, 184);font-size:30px;">ширина</span>
+                      <br>
+                      <input type="text" class="width_height_cellSize" id="text2" value="10"><span style="color:rgb(141, 0, 184);font-size:30px;">высота</span>
+                      <br>
+                      <input type="text" class="width_height_cellSize" id="text4" value="50"><span style="color:rgb(141, 0, 184);font-size:30px;">размер ячейки</span>
+                      <br>
+                      <input type="button"  class="settings_menu_generate pointer" onclick="table_gen();" value="Сгенерировать / сбросить">
+                      <input type="button"  class="settings_menu_copy pointer" onclick="massgen();funcyCopy();funcyCopy();" value="скопировать массив в буфер">
+                </div>
+      </div>
+    </div>
+    <div style="z-index:50;">
+        <div style="width:100%;height:100px;position:relative;">
+        </div>
+        <header>
+          <div class="register_button" id="register_button_id"onclick="change_display3();">log in/up</div>
+ <div id="php_bug_report"style="display:none;width:200px;height:500px;border:3px solid black;background-color:gray;position:fixed;bottom:0px;">
+       <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+       Отправить этот файл: <input type=file name="myFile" id="myFile" />
+       <input onclick="send_img()"type="submit" value="Send File" />
+</div>
+          <div style="color:rgb(141, 0, 184);font-size:50px;position:relative;display:inline-block;">TileMapEditor</div>
+          <div id="hateThisShit" class="hidden_div"></div>
+          <div class="save_map_div pointer" onclick="massgen2();sendMap(width,height,mapTiles);">Сохранить карту</div>
+          <div class="load_map_div pointer" onclick=" if(document.getElementById('user_div_id').innerHTML=='NotLogin'){return 0;};change_display2();load_saves();">Загрузить карту</div><!--change_display2();-->
+          <div class="user_div" id="user_div_id">NotLogin</div>
+            <!-- анимированный блок-->
+          <div class="display_div pointer" onclick="change_display();">Импортировать массив</div>
+              <!-- -->
+              <div class="generate_menu" id="generate_menu_id">
+                <textarea id="generateArea" class="textarea"></textarea>
+                <div style="position:absolute;display:inline-block;right:10px;">
+                  <input type="button"  onclick="generate_table_from_array();" class="pointer textarea_generate_div" value="Построить">
+                </div>
+                <div class="display_div2 pointer" onclick="change_display();">
+                </div>
+              </div>
+              <!-- -->
+              <div class="load_menu" id="load_menu_id">
+                <div class="display_div3 pointer" onclick="change_display2();">
+                </div>
+              </div>
+              <!-- -->
+              <div class="register_menu" id="register_menu_id">
+                <div class="display_div4 pointer" onclick="change_display3();">
+                </div>
+                  Логин: <input id="login1" type="text" name="login" class="register_menu_text"/><br />
+                <!--
+                  Пароль: <input id="pass" type="password" name="password" class="register_menu_text"/><br />
+                  Подтверждение: <input id="re_pass" type="password" name="password2" class="register_menu_text"/><br />
+                  Email: <input id="mail" type="text" name="mail" class="register_menu_text"/><br />
+                -->
+                  <input onclick="registration();" type="submit" name="GO" value="Регистрация"class="register_menu_text"style="font-color:rgb(141, 0, 184);position:relative;left:36px;top:5px;"><br />
+                    Логин: <input id="login2" type="text" name="login" class="register_menu_text"/><br />
+                    <input onclick="userInfo();"type="submit" name="GO" value="Войти"class="login_menu_text"style="font-color:rgb(141, 0, 184);position:relative;left:55px;top:5px;">
+              </div>
+              <!-- -->
+          <!--/анимированный блок -->
+          <div>
+            <input title="Num+"type="button" class="table_scale"style="right:50px;" value="+" onclick="w_h_plus()">
+            <input title="Num-"type="button" class="table_scale"style="right:25px;" value="-" onclick="w_h_minus()">
+          </div>
+        </header>
+        <div id="div"onmousemove="script();"onmousedown="return false" onselectstart="return false" style="margin: auto;width:auto;height:auto;">
+        <script src="script2(test).js"></script>
+        <script src="generate2.js"></script>
+        </div>
+    </div>
+<br>
+<br>
+<script>
+  table_gen();
+</script>
+  </body>
+</html>
+
+<!--юные техники изобретатели 21 марта
+поиск НИТ 24марта(~~в один из дней~~)
+
+
+-->

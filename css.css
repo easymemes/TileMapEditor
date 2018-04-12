@@ -1,0 +1,387 @@
+.button_color
+  {
+    width:50px;
+    height:50px;
+  }
+.div2
+  {
+    color:white;
+    background-color:rgb(142, 168, 216);
+    width:auto;
+    height:auto;
+  }
+.color_menu
+{
+  background: rgb(142, 168, 216);
+  width: 0px;
+  height: 500px;
+  transition: width 0.3s linear;
+  position:absolute;
+  overflow:hidden;
+  border-radius: 20px;
+  border:0px solid rgb(7, 131, 202);
+  padding:0px;
+  z-index:10;
+  overflow-y:auto;
+}
+.generate_menu
+{
+  position:fixed;
+  background-color:rgb(3, 80, 148);
+  border-radius: 20px;
+  top:20%;
+  left:20%;
+  width:60%;
+  height:60%;
+  border:3px solid rgb(7, 131, 202);
+  padding:5px;
+  display: none;
+}
+.textarea
+{
+  border-radius: 20px;
+  resize: none;
+  width:100%;
+  height:100%;
+}
+    .settings_menu
+    {
+      background: rgb(142, 168, 216);
+      width: 460px;
+      height: 0px;
+      transition: height 0.3s linear;
+        position:absolute;
+        overflow:hidden;
+        border-radius: 20px;
+        border:0px solid rgb(7, 131, 202);
+        padding:0px;
+        z-index:10;
+
+    }
+    input:checked + .color_menu
+    {
+      width:230px;
+      border:3px solid rgb(7, 131, 202);
+      padding:5px;
+    }
+    input:checked + .settings_menu
+    {
+      height:400px;
+      border:3px solid rgb(7, 131, 202);
+      padding:5px;
+    }
+    label
+    {
+      display: block;
+      width:20px;
+      height:20px;
+    }
+    header
+    {
+      width:100%;
+      height:100px;
+      background-color: rgb(142, 168, 216);
+      position:fixed;
+      padding-left:10px;
+      top:0px;
+    }
+    body
+    {
+      font-family: 'Open Sans', sans-serif;
+      margin:0px;
+      padding:0px;
+      background-color: rgb(159, 204, 241);
+    }
+    .width_height_cellSize
+    {
+      width:70px;
+      height:20px;
+      border-radius: 10px;
+      border:2px solid rgb(7, 131, 202);
+    }
+    .table_scale
+    {
+      position:absolute;
+      width:25px;
+      height:25px;
+      border-radius: 20px;
+      border:2px solid rgb(7, 131, 202);
+    }
+    .display_div
+    {
+      position:absolute;
+      width:190px;
+      height:25px;
+      border-radius: 20px;
+      border:2px solid rgb(7, 131, 202);
+      display:inline-block;
+      right:50px;
+      top:20px;
+      padding:5px;
+      color:rgb(141, 0, 184);
+    }
+    .display_div2
+    {
+      position:absolute;
+      width:25px;
+      height:25px;
+      border-radius: 20px;
+      border:2px solid rgb(7, 131, 202);
+      display:inline-block;
+      background-image: url('image/x.png');
+      background-size:cover;
+      top:0px;
+      right:0px;
+
+    }
+    .settings_dinamic_div
+    {
+      border-radius: 20px;
+      border:2px solid rgb(7, 131, 202);
+      position:absolute;
+      z-index:15;
+      width:20px;
+      height:20px;
+      background-image:url('image/st.png');
+      background-size:cover;
+    }
+    .color_dinamic_div
+    {
+      border-radius: 20px;
+      border:2px solid rgb(7, 131, 202);
+      position:absolute;
+      z-index:15;
+      width:20px;
+      height:20px;
+      background-image:url('image/pl.jpg');
+      background-size:cover;
+    }
+    .save_map_div
+    {
+      width:140px;
+      height:20px;
+      border-radius: 20px;
+      position:absolute;
+      bottom:10px;
+      border:2px solid rgb(7, 131, 202);
+      padding:5px;
+      color:rgb(141, 0, 184);
+    }
+    .load_map_div
+    {
+      width:140px;
+      height:20px;
+      border-radius: 20px;
+      position:absolute;
+      bottom:10px;
+      left:200px;
+      border:2px solid rgb(7, 131, 202);
+      padding:5px;
+      color:rgb(141, 0, 184);
+    }
+    .pointer
+    {
+      cursor:pointer;
+    }
+    .settings_menu_generate
+    {
+      color:rgb(141, 0, 184);
+      width:185px;
+      height:40px;
+      background-color:rgb(142, 168, 216);
+      border-radius: 20px;
+      border:5px solid rgb(7, 131, 202);
+    }
+    .settings_menu_copy
+    {
+      color:rgb(141, 0, 184);
+      width:220px;
+      height:40px;
+      background-color:rgb(142, 168, 216);
+      border-radius: 20px;
+      border:5px solid rgb(7, 131, 202);
+    }
+    .textarea_generate_div
+    {
+      color:rgb(141, 0, 184);
+      width:110px;
+      height:40px;
+      background-color:rgb(142, 168, 216);
+      border-radius: 20px;
+      border:5px solid rgb(7, 131, 202);
+      position:absolute;
+      right:2px;
+      bottom:6px;
+    }
+    .hidden_div
+    {
+      width:50px;
+      height:50px;
+      background-color:black;
+      position:absolute;
+      left:50000px;
+    }
+    .load_menu
+    {
+      position:fixed;
+      background-color:rgb(3, 80, 148);
+      border-radius: 20px;
+      top:20%;
+      left:20%;
+      width:60%;
+      height:60%;
+      border:3px solid rgb(7, 131, 202);
+      padding:5px;
+      display: none;
+      overflow:auto;
+    }
+    .display_div3
+    {
+      position:absolute;
+      width:25px;
+      height:25px;
+      border-radius: 20px;
+      border:2px solid rgb(7, 131, 202);
+      display:inline-block;
+      background-image: url('image/x.png');
+      background-size:cover;
+      top:0px;
+      right:0px;
+      z-index:99;
+    }
+    .load_map_buttons
+    {
+      color:rgb(141, 0, 184);
+      width:90%;
+      position: relative;
+      left:30px;
+      height:27px;
+      background-color:rgb(142, 168, 216);
+      border-radius: 20px;
+      border:5px solid rgb(7, 131, 202);
+      margin-top:5px;
+      text-align: center;
+      z-index:50;
+    }
+    .delete_load
+    {
+      width:25px;
+      height:25px;
+      border-radius: 20px;
+      border:2px solid rgb(7, 131, 202);
+      display:inline-block;
+      background-image: url('image/xx.png');
+      background-size:cover;
+      position: absolute;
+      left:-35px;
+    }
+    .register_button
+    {
+      width:70px;
+      height:20px;
+      border-radius: 20px;
+      position:absolute;
+      bottom:10px;
+      left:500px;
+      border:2px solid rgb(7, 131, 202);
+      padding:5px;
+      color:rgb(141, 0, 184);
+      text-align: center;
+    }
+    .register_menu
+    {
+      position:fixed;
+      background-color:rgb(142, 168, 216);
+      border-radius: 20px;
+      top:40%;
+      left:45%;
+      width:200px;
+      height:200px;
+      border:3px solid rgb(7, 131, 202);
+      padding:5px;
+      display:none;
+      color:rgb(141, 0, 184);
+    }
+    .display_div4
+    {
+      position:absolute;
+      width:25px;
+      height:25px;
+      border-radius: 20px;
+      border:2px solid rgb(7, 131, 202);
+      display:inline-block;
+      background-image: url('image/x.png');
+      background-size:cover;
+      top:0px;
+      right:0px;
+    }
+    .register_menu_text
+    {
+      border-radius: 10px;
+      border:2px solid rgb(7, 131, 202);
+      color:rgb(141, 0, 184);
+    }
+    .login_menu_text
+    {
+      border-radius: 10px;
+      border:2px solid rgb(7, 131, 202);
+      color:rgb(141, 0, 184);
+    }
+    .InputTextColorSettings
+    {
+      width:20px;
+      position:relative;
+      border-radius:15px;
+      bottom:25px;
+      left:5px;
+    }
+    .InputButtonColorSettings
+    {
+      width:20px;
+      position: relative;
+      border-radius:15px;
+      bottom:22px;
+      left:2px;
+      display: inline-block;
+      background-color: aqua;
+    }
+    .externalColorDiv
+    {
+      width:50px;
+      height:50px;
+      position:relative;
+      display:inline-block;
+      margin-right:5px;
+      margin-bottom:5px;
+    }
+    .user_div
+    {
+      border-radius: 10px;
+      border:2px solid rgb(7, 131, 202);
+      width:100px;
+      height:20px;
+      position:absolute;
+      left:400px;
+      top:0px;
+    }
+    ::-webkit-scrollbar
+    {
+      width:10px;
+      background-color: rgba(0, 0, 0, 0);
+      border-radius: 10px;
+      position: relative;
+      right:5px;
+    }
+    ::-webkit-scrollbar-thumb
+    {
+      background-color: rgba(87, 28, 105, 0.404);
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover
+    {
+      background-color: rgba(96, 21, 119, 0.644);
+    }
+    /* ::-webkit-scrollbar:horizontal
+    {
+      display:none;
+    }  */
